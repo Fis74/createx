@@ -1,0 +1,159 @@
+<div id="cv-popup" aria-hidden="true" class="popup">
+  <div class="popup__wrapper">
+    <div class="popup__content">
+      <button data-close type="button" class="popup__close">
+        <svg>
+          <use xlink:href="@img/icons/sprite/sprite.svg#close"></use>
+        </svg>
+      </button>
+      <form action="#" class="popup__form form-post">
+        <h2 class="form-post__title">A quick way to discuss details</h2>
+        <div class="form-post__content">
+          <label class="form-post__label form-post__label--big" for="cv-name">
+            <span class="form-post__field">Name*</span>
+            <input
+              autocomplete="name"
+              id="cv-name"
+              class="form-post__input input"
+              type="text"
+              placeholder="Your name"
+              data-required="text"
+              data-error="Please input name"
+            >
+          </label>
+          <select
+            class="form-post__select"
+            data-class-modif-label="form-post__label"
+            name="cv-location"
+            data-required="select"
+            data-error="Please choose location"
+          >
+            <option
+              data-class-modif-span="form-post__field"
+              data-span-text="Location*"
+              value=""
+              selected
+            >
+              Choose your location
+            </option>
+            <option value="newYork">New York</option>
+            <option value="sanFrancisko">San Francisco</option>
+            <option value="newJersey">New Jersey</option>
+          </select>
+          <label class="form-post__label form-post__label--big" for="cv-phone">
+            <span class="form-post__field">Phone*</span>
+            <input
+              autocomplete="mobile"
+              id="cv-phone"
+              class="form-post__input input"
+              type="tel"
+              placeholder="Your phone number"
+              data-required="tel"
+              data-error="Please input phone"
+            >
+          </label>
+          <label class="form-post__label form-post__label--big" for="cv-email">
+            <span class="form-post__field">Email*</span>
+            <input
+              autocomplete="email"
+              id="cv-email"
+              class="form-post__input input"
+              type="email"
+              placeholder="Your working email"
+              data-required="email"
+              data-error="Please input email"
+            >
+          </label>
+          <label
+            class="form-post__label form-post__label--big"
+            for="cv-message"
+          >
+            <span class="form-post__field">Сovering letter</span>
+            <textarea
+              id="cv-message"
+              class="form-post__input form-post__input--middle input"
+              placeholder="Your message"
+            ></textarea>
+          </label>
+          <label class="form-post__label custom-file" for="cv-file">
+            <span class="custom-file__field">Attach your CV*</span>
+            <input
+              class="custom-file__input"
+              type="file"
+              id="cv-file"
+              accept=".pdf"
+              size="10000000"
+              data-required="file"
+              data-error="Please upload file"
+            >
+          </label>
+        </div>
+        <button
+          class="form-post__button button button--full button--regular"
+          type="submit"
+        >
+          send
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div id="subscribe-popup" aria-hidden="true" class="popup">
+  <div class="popup__wrapper">
+    <div class="popup__content">
+      <button data-close type="button" class="popup__close">
+        <svg>
+          <use xlink:href="@img/icons/sprite/sprite.svg#close"></use>
+        </svg>
+      </button>
+      <form action="#" class="popup__form form-post">
+        <h2 class="form-post__title">Subscribe to our newsletter</h2>
+        <div class="form-post__content">
+          <label
+            class="form-post__label form-post__label--big"
+            for="subscribe-name"
+          >
+            <span class="form-post__field">Name*</span>
+            <input
+              autocomplete="name"
+              id="subscribe-name"
+              class="form-post__input input"
+              type="text"
+              placeholder="Your name"
+              data-required="text"
+              data-error="Please input name"
+            >
+          </label>
+          <label
+            class="form-post__label form-post__label--big"
+            for="subscribe-email"
+          >
+            <span class="form-post__field">Email*</span>
+            <input
+              autocomplete="email"
+              id="subscribe-email"
+              class="form-post__input input"
+              type="email"
+              placeholder="Your working email"
+              data-required="email"
+              data-error="Please input email"
+            >
+          </label>
+        </div>
+        <button
+          class="form-post__button button button--full button--regular"
+          type="submit"
+        >
+          send
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div id="menu-popup" aria-hidden="true" class="menu-popup">
+  <div class="menu-popup__wrapper">
+    <div class="menu-popup__content"></div>
+  </div>
+</div>

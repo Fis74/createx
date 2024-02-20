@@ -1,0 +1,165 @@
+.page-positions {
+  &__hero-block {
+    min-height: rem(600);
+    @include adaptiveValue("padding-top", 152, 80, 767.98);
+    background-color: $gray-200;
+    &::before {
+      content: "";
+      position: absolute;
+      top: rem(95);
+      background-image: url("@img/hero-block/5.png");
+      background-repeat: no-repeat;
+      background-position: top right;
+      object-fit: contain;
+      max-height: rem(600);
+      height: 100%;
+      width: 100%;
+      right: 0;
+      z-index: 1;
+      background-color: $gray-200;
+    }
+    @media (max-width: $mobile) {
+      min-height: 100%;
+      @include adaptiveValue("padding-bottom", 152, 50, 767.98);
+      &::before {
+        display: none;
+      }
+    }
+  }
+  &__container {
+  }
+}
+
+.job {
+  &__container {
+    padding-top: rem(121);
+    padding-bottom: rem(60);
+    @include adaptiveValue("padding-top", 121, 60);
+    @include adaptiveValue("padding-bottom", 60, 30);
+  }
+  &__inner {
+    display: grid;
+    grid-template-columns: minmax(rem(500), rem(705)) minmax(rem(300), rem(390));
+    justify-content: space-between;
+    @media (max-width: $tablet) {
+      grid-template-columns: 1fr;
+      row-gap: rem(30);
+    }
+  }
+
+  &__vacancy {
+  }
+  &__block-subscribe {
+  }
+}
+.block-vacancy {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: rem(24);
+  }
+  &__item {
+  }
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: rem(32) rem(40) rem(33);
+    border-radius: rem(4);
+    @media (max-width: em(600)) {
+      padding: rem(16) rem(20) rem(16);
+      flex-direction: column;
+      align-items: start;
+      row-gap: rem(20);
+    }
+  }
+  &__info {
+  }
+  &__meta {
+    font-weight: 400;
+    font-size: rem(14);
+    line-height: 150%;
+    color: var(--gray-700);
+    display: flex;
+    gap: rem(24);
+    &:not(:last-child) {
+      margin-bottom: rem(8);
+    }
+  }
+  &__location {
+    position: relative;
+    padding-left: rem(24);
+    background: url("@img/icons/location.svg");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: rem(20) rem(20);
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      right: rem(-12);
+      top: rem(5);
+      width: rem(1);
+      height: rem(12);
+      background-color: $mainTextColor;
+    }
+  }
+  &__time {
+    padding-left: rem(24);
+    background: url("@img/icons/сlock.svg");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: rem(20) rem(20);
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: rem(20);
+    line-height: 150%;
+    color: $black;
+    @include adaptiveValue("font-size", 20, 18);
+  }
+  &__button {
+    @media (max-width: em(360)) {
+      width: 100%;
+    }
+  }
+}
+
+.block-subscribe {
+  @media (max-width: $tablet) {
+    padding: rem(32) rem(40) rem(33);
+  }
+  @media (max-width: em(600)) {
+    padding: rem(16) rem(20) rem(16);
+  }
+  &__title {
+    font-weight: 700;
+    line-height: 150%;
+    color: $black;
+    @include adaptiveValue("font-size", 28, 24);
+    &:not(:last-child) {
+      margin-bottom: rem(24);
+    }
+  }
+  &__description {
+    font-size: rem(18);
+    line-height: 150%;
+    color: $gray;
+    &:not(:last-child) {
+      margin-bottom: rem(48);
+    }
+  }
+  &__buttons {
+    display: flex;
+    gap: rem(30);
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  &__button {
+    min-width: rem(180);
+    @media (max-width: em(360)) {
+      width: 100%;
+    }
+  }
+}

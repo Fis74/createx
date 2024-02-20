@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="ru">
+  @@include('html/_head.htm',{ "title":"Createx | Contacts" })
+  <body>
+    <div class="wrapper">
+      @@include('html/_header-contacts.htm',{})
+      <main class="page">
+        <section data-watch class="page-contacts__hero-block hero-block">
+          <div class="hero-block__container">
+            <ul class="breadcrumbs">
+              <li class="breadcrumbs__item">
+                <a class="breadcrumbs__link" href="index.html">Homepage</a>
+              </li>
+              <li class="breadcrumbs__item">
+                <a class="breadcrumbs__link" tabindex="-1" href="contacts.html"
+                  >Contacts</a
+                >
+              </li>
+            </ul>
+            <h1 class="hero-block__title">CONTACTS</h1>
+            <p class="hero-block__description">
+              Contact us for all your construction needs. We always welcome any
+              questions and comments.
+            </p>
+          </div>
+          @@include('html/_up.htm',{})
+        </section>
+        <section class="contact-us">
+          <div class="contact-us__container">
+            <div class="contact-us__block-header block-header">
+              <h2 class="block-header__title">Contact us</h2>
+              <p class="block-header__description">
+                Please complete the form. Detailed information will help us to
+                make a tuned offer.
+              </p>
+            </div>
+            <div class="contact-us__inner">
+              <img
+                class="contact-us__image"
+                src="@img/contacts/1.jpg"
+                alt="image"
+              >
+              <form class="contact-us__form form-contact-us" action="#">
+                <div class="form-contact-us__content" data-one-select>
+                  <label class="form-contact-us__label" for="contact-us-name">
+                    <span class="form-contact-us__field">Name*</span>
+                    <input
+                      autocomplete="name"
+                      id="contact-us-name"
+                      class="form-contact-us__input input"
+                      type="text"
+                      placeholder="Your name"
+                      data-required="text"
+                      data-error="Please input name"
+                    >
+                  </label>
+                  <select
+                    data-class-modif-label="form-contact-us__label"
+                    name="contact-us-location"
+                  >
+                    <option
+                      data-class-modif-span="form-contact-us__field"
+                      data-span-text="I am interested in"
+                      value=""
+                      selected
+                    >
+                      Choose your interest
+                    </option>
+                    <option value="interiorDesign">Interior Design</option>
+                    <option value="frontendDeveloper">
+                      Frontend Developer
+                    </option>
+                  </select>
+
+                  <label class="form-contact-us__label" for="contact-us-phone">
+                    <span class="form-contact-us__field">Phone*</span>
+
+                    <input
+                      autocomplete="mobile"
+                      id="contact-us-phone"
+                      class="input form-contact-us__input"
+                      type="tel"
+                      placeholder="Your phone number"
+                      data-required="tel"
+                      data-error="Please input tel"
+                    >
+                  </label>
+                  <select
+                    data-class-modif-label="form-contact-us__label"
+                    name="contact-us"
+                    data-required="select"
+                    data-error="Please choose location"
+                  >
+                    <option
+                      data-class-modif-span="form-contact-us__field"
+                      data-span-text="Location*"
+                      value=""
+                      selected
+                    >
+                      Choose your location
+                    </option>
+                    <option value="newYork">New York</option>
+                    <option value="sanFrancisko">San Francisco</option>
+                    <option value="newJersey">New Jersey</option>
+                  </select>
+                  <label class="form-contact-us__label" for="contact-us-email">
+                    <span class="form-contact-us__field">Email</span>
+                    <input
+                      autocomplete="email"
+                      id="contact-us-email"
+                      class="input form-contact-us__input"
+                      type="email"
+                      placeholder="Your working email"
+                    >
+                  </label>
+                  <fieldset class="form-contact-us__label">
+                    <legend class="form-contact-us__field">
+                      Preferred contact method*
+                    </legend>
+                    <div class="form-contact-us__flex">
+                      <label class="form-contact-us__radio custom-radio">
+                        <input
+                          class="custom-radio__input"
+                          type="radio"
+                          value="phone"
+                          data-required="radio"
+                          name="contact-us-radio"
+                          data-error="Preferred contact method"
+                        >
+                        <span class="custom-radio__text">Phone</span>
+                      </label>
+                      <label class="form-contact-us__radio custom-radio">
+                        <input
+                          class="custom-radio__input"
+                          type="radio"
+                          value="email"
+                          data-required="radio"
+                          name="contact-us-radio"
+                          data-error="Preferred contact method"
+                        >
+                        <span class="custom-radio__text">Email</span>
+                      </label>
+
+                      <label class="form-contact-us__radio custom-radio">
+                        <input
+                          class="custom-radio__input"
+                          type="radio"
+                          value="viber"
+                          data-required="radio"
+                          name="contact-us-radio"
+                          data-error="Preferred contact method"
+                        >
+                        <span class="custom-radio__text">Viber</span>
+                      </label>
+                    </div>
+                  </fieldset>
+                  <label
+                    class="form-contact-us__label form-contact-us__label--big"
+                    for="contact-us-message"
+                  >
+                    <span class="form-contact-us__field">Message*</span>
+                    <textarea
+                      id="contact-us-message"
+                      class="input form-contact-us__input form-contact-us__input--big"
+                      placeholder="Your message"
+                      data-required="text"
+                      data-error="Please input message"
+                    ></textarea>
+                  </label>
+                </div>
+                <div class="form-contact-us__footer">
+                  <label
+                    class="form-contact-us__checkbox contact-us-checkbox"
+                    for="contact-us-checkbox"
+                  >
+                    <input
+                      id="contact-us-checkbox"
+                      class="custom-checkbox__input"
+                      type="checkbox"
+                      data-required="checkbox"
+                      data-error="Please agree"
+                    >
+                    <span class="custom-checkbox__field"
+                      >I agree to receive communications from Createx
+                      Construction Bureau.</span
+                    >
+                  </label>
+                  <button class="form-contact-us__button button" type="submit">
+                    send request
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+        <section class="contacts-info">
+          <div class="contacts-info__container">
+            <div class="contacts-info__block-header block-header">
+              <h2 class="block-header__title">Our offices</h2>
+              <p class="block-header__description">
+                Give us a call, send us a note or visit our office. We can’t
+                wait to hear from you!
+              </p>
+            </div>
+            <ul class="contacts-info__list">
+              <li class="contacts-info__item">
+                <h3 class="contacts-info__subtitle">New York, USA</h3>
+                <address class="contacts-info__address">
+                  8502 Preston Rd. Inglewood, New York 98380
+                </address>
+                <a class="contacts-info__link" href="#">See on the map</a>
+                <ul class="contacts-info__elements">
+                  <li class="contacts-info__element">
+                    <span class="contacts-info__name">Call:</span>
+                    <a class="contacts-info__value" href="tel:4055550128"
+                      >(405) 555-0128</a
+                    >
+                  </li>
+
+                  <li class="contacts-info__element">
+                    <span class="contacts-info__name">Email:</span>
+                    <a
+                      class="contacts-info__value"
+                      href="mailto:hello@createx.com"
+                      >hello@createx.com</a
+                    >
+                  </li>
+                  <li class="contacts-info__element">
+                    <span class="contacts-info__name">Schedule:</span>
+                    Mon - Fri 9:00 - 18:00
+                  </li>
+                </ul>
+              </li>
+
+              <li class="contacts-info__item">
+                <h3 class="contacts-info__subtitle">New Jersey, USA</h3>
+                <address class="contacts-info__address">
+                  2464 Royal Ln. Mesa, New Jersey 45463
+                </address>
+                <a class="contacts-info__link" href="#">See on the map</a>
+                <ul class="contacts-info__elements">
+                  <li class="contacts-info__element">
+                    <span class="contacts-info__name">Call:</span>
+                    <a class="contacts-info__value" href="tel:8085550111"
+                      >(808) 555-0111</a
+                    >
+                  </li>
+                  <li class="contacts-info__element">
+                    <span class="contacts-info__name">Email:</span>
+                    <a
+                      class="contacts-info__value"
+                      href="mailto:hello@createx.com"
+                      >hello@createx.com</a
+                    >
+                  </li>
+                  <li class="contacts-info__element">
+                    <span class="contacts-info__name">Schedule:</span>
+                    Mon - Fri 9:00 - 18:00
+                  </li>
+                </ul>
+              </li>
+              <li class="contacts-info__item">
+                <h3 class="contacts-info__subtitle">San Francisco, USA</h3>
+                <address class="contacts-info__address">
+                  8502 Preston Rd. Inglewood, San Francisco 98380
+                </address>
+                <a class="contacts-info__link" href="#">See on the map</a>
+                <ul class="contacts-info__elements">
+                  <li class="contacts-info__element">
+                    <span class="contacts-info__name">Call:</span>
+                    <a class="contacts-info__value" href="tel:5055550125"
+                      >(505) 555-0125</a
+                    >
+                  </li>
+                  <li class="contacts-info__element">
+                    <span class="contacts-info__name">Email:</span>
+                    <a
+                      class="contacts-info__value"
+                      href="mailto:hello@createx.com"
+                      >hello@createx.com</a
+                    >
+                  </li>
+                  <li class="contacts-info__element">
+                    <span class="contacts-info__name">Schedule:</span>
+                    Mon - Fri 10:00 - 19:00
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <h2 class="contacts-info__title">Find us at</h2>
+            <div class="contacts-info__social social">
+              <ul class="social__list">
+                <li class="social__item">
+                  <a
+                    class="social__link"
+                    href="#"
+                    target="_blank"
+                    aria-label="WhatsApp"
+                  >
+                    <svg>
+                      <use
+                        xlink:href="@img/icons/sprite/sprite.svg#whatsapp"
+                      ></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a
+                    class="social__link"
+                    href="#"
+                    target="_blank"
+                    aria-label="messanger"
+                  >
+                    <svg>
+                      <use
+                        xlink:href="@img/icons/sprite/sprite.svg#messanger"
+                      ></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a
+                    class="social__link"
+                    href="#"
+                    target="_blank"
+                    aria-label="facebook"
+                  >
+                    <svg>
+                      <use
+                        xlink:href="@img/icons/sprite/sprite.svg#facebook"
+                      ></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a
+                    class="social__link"
+                    href="#"
+                    target="_blank"
+                    aria-label="twitter"
+                  >
+                    <svg>
+                      <use
+                        xlink:href="@img/icons/sprite/sprite.svg#twitter"
+                      ></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a
+                    class="social__link"
+                    href="#"
+                    target="_blank"
+                    aria-label="youtube"
+                  >
+                    <svg>
+                      <use
+                        xlink:href="@img/icons/sprite/sprite.svg#youtube"
+                      ></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </main>
+      @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_popup.htm',{}) @@include('html/_js.htm',{})
+  </body>
+</html>

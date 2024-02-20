@@ -1,0 +1,243 @@
+.post {
+  &__container {
+    @include adaptiveValue("padding-top", 60, 30);
+    @include adaptiveValue("padding-bottom", 180, 90);
+  }
+  &__header {
+  }
+  &__block-header {
+  }
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    @include adaptiveValue("row-gap", 80, 40);
+  }
+
+  &__image {
+    max-width: 100%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+  }
+  &__title {
+    font-weight: 700;
+    font-size: rem(64);
+    line-height: 120%;
+    color: $black;
+    @include adaptiveValue("font-size", 64, 36);
+    &:not(:last-child) {
+      margin-bottom: rem(48);
+      @include adaptiveValue("margin-bottom", 48, 24);
+    }
+  }
+  &__wrapper {
+    max-width: rem(810);
+    margin: 0 auto;
+  }
+  &__content {
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 60, 30);
+    }
+  }
+  &__share {
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 80, 40);
+    }
+  }
+  &__block-comments {
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 120, 60);
+    }
+  }
+  &__info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @include adaptiveValue("margin-bottom", 80, 40);
+    transition: color 0.8s;
+    row-gap: rem(20);
+  }
+  &__share {
+    display: flex;
+  }
+  &__meta-article {
+  }
+  &__social {
+    position: relative;
+    top: rem(2);
+  }
+  &__content {
+    h2 {
+      font-weight: 700;
+      line-height: 150%;
+      color: $black;
+      @include adaptiveValue("font-size", 20, 18);
+      &:not(:last-child) {
+        margin-bottom: rem(28);
+      }
+    }
+    p {
+      color: $gray;
+      letter-spacing: 0.03em;
+
+      &:not(:last-child) {
+        margin-bottom: rem(24);
+      }
+    }
+    blockquote {
+      padding-left: rem(58);
+      margin-top: rem(48);
+      font-weight: 700;
+      @include adaptiveValue("font-size", 20, 18);
+      line-height: 150%;
+      color: $black;
+      background-image: url("@img/icons/braces.svg");
+      background-repeat: no-repeat;
+      background-position: left top;
+      background-size: rem(28) rem(20);
+      &:not(:last-child) {
+        margin-bottom: rem(48);
+      }
+    }
+    ul {
+      color: gray;
+      display: flex;
+      flex-direction: column;
+      row-gap: rem(6);
+      &:not(:last-child) {
+        margin-bottom: rem(25);
+      }
+      li {
+        position: relative;
+        padding-left: rem(32);
+        background-image: url("@img/icons/check-rounded.svg");
+        background-repeat: no-repeat;
+        background-size: rem(16) rem(16);
+        background-position: left center;
+        color: $gray;
+      }
+    }
+  }
+}
+
+.social-post {
+  &__text {
+    color: $black;
+    font-weight: 700;
+    margin-right: rem(12);
+  }
+  &__list {
+    display: flex;
+    gap: rem(12);
+  }
+  &__item {
+  }
+  &__link {
+    display: block;
+    width: rem(24);
+    height: rem(24);
+
+    svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+      -o-object-fit: cover;
+      object-fit: cover;
+      fill: $mainTextColor;
+      transition: fill 0.8s;
+      @media (any-hover: hover) {
+        &:hover {
+          fill: $primary;
+        }
+      }
+    }
+  }
+}
+
+.block-comments {
+  &__block-header {
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(60);
+  }
+  &__item {
+  }
+  &__left {
+  }
+  &__name {
+  }
+  &__teme {
+  }
+  &__right {
+  }
+  &__body {
+  }
+  &__text {
+  }
+  &__button {
+  }
+}
+
+.block-comment {
+  display: flex;
+  gap: rem(30);
+  @media (max-width: $mobile) {
+    flex-wrap: wrap;
+  }
+  &__left {
+    flex: 0 0 rem(150);
+  }
+  &__name {
+    display: block;
+    font-weight: 700;
+    font-size: rem(18);
+    line-height: 150%;
+    color: $black;
+    margin-bottom: rem(8);
+  }
+  &__time {
+    font-size: rem(14);
+    display: block;
+  }
+  &__right {
+    flex: 1 1 auto;
+  }
+  &__body {
+    &:not(:last-child) {
+      margin-bottom: rem(18);
+    }
+  }
+  &__text {
+    color: $gray;
+  }
+  &__button {
+    display: flex;
+    align-items: center;
+    gap: rem(8);
+
+    @media (any-hover: hover) {
+      &:hover {
+        span {
+          color: $primary;
+        }
+        svg {
+          fill: $primary;
+        }
+      }
+    }
+    span {
+      transition: color 0.8s;
+      font-weight: 400;
+      font-size: rem(14);
+      line-height: 150%;
+    }
+    svg {
+      width: rem(16);
+      height: rem(16);
+      fill: $mainTextColor;
+      transition: fill 0.8s;
+    }
+  }
+}

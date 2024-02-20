@@ -1,0 +1,299 @@
+//<FORM>
+// Снипет (HTML):
+.form-contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: $white;
+  border-radius: rem(4);
+  &__title {
+    text-align: center;
+    font-size: rem(28);
+    font-weight: 700;
+    line-height: 150%;
+    color: $black;
+    &:not(:last-child) {
+      margin-bottom: rem(24);
+    }
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: rem(20);
+    &:not(:last-child) {
+      margin-bottom: rem(24);
+    }
+  }
+  &__label {
+    width: 100%;
+    cursor: pointer;
+    &:focus-within {
+      .form-contacts__field {
+        color: $primary;
+      }
+    }
+
+    &._select-open {
+      .form-contacts__field {
+        color: $primary;
+      }
+      .select__title {
+        outline: rem(1) solid $primary;
+      }
+    }
+    &._select-focus {
+      .select__title {
+        outline: rem(1) solid $primary;
+      }
+    }
+  }
+  &__input {
+    &--middle {
+      min-height: rem(66);
+    }
+    &--big {
+      min-height: rem(86);
+    }
+  }
+  &__field {
+    display: block;
+    font-size: rem(14);
+    color: $gray;
+    line-height: 150%;
+
+    &:not(:last-child) {
+      margin-bottom: rem(8);
+    }
+  }
+
+  &__custom-checkbox {
+  }
+  &__button {
+    margin: 0 auto;
+  }
+}
+
+.form-post {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: rem(30);
+    row-gap: rem(22);
+    &:not(:last-child) {
+      margin-bottom: rem(48);
+    }
+  }
+  &__title {
+    font-weight: 700;
+    font-size: rem(28);
+    line-height: 150%;
+    text-align: center;
+    color: $black;
+    &:not(:last-child) {
+      margin-bottom: rem(28);
+    }
+    &--big {
+      font-size: rem(46);
+      line-height: 130%;
+      &:not(:last-child) {
+        margin-bottom: rem(48);
+      }
+    }
+  }
+  &__label {
+    flex: 1 1 auto;
+    &--big {
+      flex: 1 1 100%;
+    }
+    cursor: pointer;
+    &:focus-within {
+      .form-post__field {
+        color: $primary;
+      }
+      .form-post__field {
+        color: $primary;
+      }
+    }
+
+    &._select-open {
+      .form-post__field {
+        color: $primary;
+      }
+      .select__title {
+        outline: rem(1) solid $primary;
+      }
+    }
+    &._select-focus {
+      .select__title {
+        outline: rem(1) solid $primary;
+      }
+    }
+
+    &._form-error {
+      .select__title {
+        outline: rem(1) solid $red;
+      }
+    }
+  }
+  &__input {
+    font-size: rem(16) !important;
+    line-height: 162% !important;
+    padding: rem(13) rem(16) !important;
+
+    &--middle {
+      height: rem(86);
+    }
+    &--big {
+      height: rem(100);
+    }
+    &::placeholder {
+      font-size: rem(16) !important;
+      line-height: 162% !important;
+    }
+  }
+  &__field {
+    display: block;
+    margin-bottom: rem(8);
+    color: $gray;
+  }
+  &__button {
+    margin: 0 auto;
+  }
+}
+
+.form-contact-us {
+  max-width: rem(600);
+  @media (max-width: $tablet) {
+    padding: rem(15) rem(15);
+    max-width: 100%;
+  }
+  @media (max-width: em(600)) {
+  }
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: rem(24);
+    column-gap: rem(30);
+    margin-bottom: rem(40);
+    @media (max-width: em(600)) {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+  }
+  &__label {
+    min-height: rem(86);
+    flex: 1 1 45%;
+    &--big {
+      flex: 0 1 100%;
+    }
+    cursor: pointer;
+    &:focus-within {
+      .form-contact-us__field {
+        color: $primary;
+      }
+    }
+    &._form-error {
+      .select__title {
+        outline: rem(1) solid $red;
+      }
+    }
+    &._select-open {
+      .form-contact-us__field {
+        color: $primary;
+      }
+      .select__title {
+        outline: rem(1) solid $primary;
+      }
+    }
+    &._select-focus {
+      .select__title {
+        outline: rem(1) solid $primary;
+      }
+    }
+  }
+  &__field {
+    display: block;
+    margin-bottom: rem(8);
+    font-size: rem(16);
+    color: $gray;
+  }
+  &__input {
+    padding: rem(13) rem(16) !important;
+    min-height: rem(52);
+    &--big {
+      min-height: rem(128);
+    }
+  }
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__flex {
+    padding-top: rem(16);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: rem(24);
+  }
+  &__radio._form-error {
+    .form__error {
+      width: rem(200);
+    }
+  }
+  &__footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: rem(30);
+    justify-content: space-between;
+  }
+  &__checkbox {
+    flex: 0 1 rem(315);
+    position: relative;
+  }
+  &__button {
+    width: rem(210);
+  }
+}
+//</FORM>
+
+// <BUTTONS>
+// Снипет (HTML): btn
+@import "button";
+
+// <INPUTS>
+// Снипет (HTML): inp
+@import "input";
+
+// <CHECK>
+// Снипет (HTML): chk
+@import "checkbox";
+
+// <RADIO>
+// Снипет (HTML): opt
+@import "radio";
+
+// <SELECT>
+// Снипет (HTML): sel
+@import "select";
+
+// <RATING>
+// Снипет (HTML): rating
+// @import "rating";
+
+// <QUANTITY>
+// Снипет (HTML): qa
+// @import "quantity";
+
+// <RANGE>
+// Снипет (HTML):
+// @import "range";
+
+// <CALENDAR>
+// Снипет (HTML):
+// @import "datepicker";

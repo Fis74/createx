@@ -1,0 +1,71 @@
+<header class="header header--absolute">
+  <div class="header__container">
+    <button
+      data-menu-popup="#menu-popup"
+      class="menu__icon icon-menu icon-menu__open"
+      type="button"
+    >
+      <svg>
+        <use xlink:href="@img/icons/sprite/sprite.svg#menu"></use>
+      </svg>
+    </button>
+    <button
+      data-menu-popup-close
+      class="menu__icon icon-menu icon-menu__close"
+      type="button"
+    >
+      <svg>
+        <use xlink:href="@img/icons/sprite/sprite.svg#close"></use>
+      </svg>
+    </button>
+    <a href="index.html" class="header__logo logo">
+      <img src="@img/logo.svg" alt="createx">
+    </a>
+    <div class="header__menu menu">
+      <nav data-da=".menu-popup__content, 991.98" class="menu__nav">
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a
+              class="menu__link menu__link--active"
+              tabindex="-1"
+              href="about-us.html"
+              >About Us</a
+            >
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="services.html">Services</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="work.html">Work</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="news.html">News</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="contacts.html">Contacts</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <address
+      data-da=".menu__nav, 991.98"
+      class="header__contacts contacts-header"
+    >
+      <a
+        class="contacts-header__link contacts-header__link--mail"
+        href="tel:+70123456789"
+      >
+        <span class="contacts-header__caption">Call us</span>
+        <span class="contacts-header__value">(405) 555-0128</span>
+      </a>
+      <a
+        class="contacts-header__link contacts-header__link--tel"
+        href="mailto:hello@mail.com"
+      >
+        <span class="contacts-header__caption">Talk to us</span>
+        <span class="contacts-header__value">hello@createx.com</span>
+      </a>
+    </address>
+    <button class="menu__icon icon-menu" type="button"><span></span></button>
+  </div>
+</header>

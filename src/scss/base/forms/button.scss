@@ -1,0 +1,101 @@
+//<BUTTONS (a.btn+tab)>
+// Снипет (HTML): btn
+
+.button {
+  display: inline-flex;
+  position: relative;
+  text-align: center;
+  justify-content: center;
+  padding: rem(17) rem(44.5);
+  font-size: rem(16);
+  text-transform: uppercase;
+  line-height: 100%;
+  font-weight: 700;
+  color: $white;
+  background-color: $primary;
+  transition: background-color 0.8s;
+  border-radius: rem(4);
+  border: rem(1) solid $primary;
+  &:focus-visible {
+    outline: rem(2) solid $primary;
+    outline-offset: rem(2);
+    border-radius: inherit;
+  }
+  &--outline {
+    border: rem(1) solid $primary;
+    background-color: $white;
+    color: $primary;
+  }
+  &--active {
+    background-color: $red;
+    &.button--outline {
+      background-color: $primary;
+      color: $white;
+    }
+  }
+  &--disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: $red;
+      color: $white;
+      &.button--outline {
+        background-color: $primary;
+        color: $white;
+      }
+      &.button--white {
+        background-color: $primary;
+      }
+    }
+  }
+  &--white {
+    border: rem(1) solid $white;
+    background-color: transparent;
+    color: $white;
+  }
+  &--full {
+    display: block;
+    width: 100%;
+  }
+  &--regular {
+    font-size: rem(14);
+    padding: rem(14) rem(33);
+    font-size: rem(14);
+  }
+  &--small {
+    padding: rem(11) rem(25.5);
+    font-size: rem(12);
+  }
+  &--footer {
+    padding: rem(12) rem(27.5);
+    font-size: rem(14);
+  }
+  &--rounded {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: rem(48);
+    height: rem(48);
+    position: relative;
+    padding: 0 0;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: $primary;
+    &:focus-visible {
+      outline: rem(2) solid $primary;
+      outline-offset: rem(2);
+    }
+    svg {
+      position: absolute;
+      width: rem(24);
+      height: rem(24);
+      fill: $white;
+    }
+  }
+  &._fw {
+    width: 100%;
+  }
+}

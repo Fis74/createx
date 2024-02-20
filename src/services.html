@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+  @@include('html/_head.htm',{ "title":"Createx | Services" })
+  <body>
+    <div class="wrapper">
+      @@include('html/_header-services.htm',{})
+      <main class="page">
+        <section data-watch class="page-services__hero-block hero-block">
+          <div class="hero-block__container">
+            <ul class="breadcrumbs">
+              <li class="breadcrumbs__item">
+                <a class="breadcrumbs__link" href="index.html">Homepage</a>
+              </li>
+              <li class="breadcrumbs__item">
+                <a class="breadcrumbs__link" tabindex="-1" href="#">Services</a>
+              </li>
+            </ul>
+            <h1 class="hero-block__title">SERVICES</h1>
+            <p class="hero-block__description">
+              If&nbsp;you are looking for a&nbsp;full-service construction
+              company, look to&nbsp;Createx Construction Bureau. We&nbsp;are
+              doing our best to&nbsp;be&nbsp;a&nbsp;partner for all of&nbsp;your
+              construction needs.
+            </p>
+          </div>
+          @@include('html/_up.htm',{})
+        </section>
+        <section class="stages">
+          <div class="stages__container">
+            <ul class="stages__list">
+              <li class="stages__item">
+                <img class="stages__image" src="@img/stages/1.jpg" alt="image">
+                <div class="stages__block-info block-info">
+                  <h2 class="block-info__title">Construction</h2>
+                  <p class="block-info__description">
+                    Sapien, feugiat faucibus orci arcu, vulputate. Tristique
+                    varius consectetur vulputate arcu, scelerisque nisi, nibh.
+                    Enim semper id sodales ultricies sed ut ut augue. Mattis
+                    habitant venenatis, gravida posuere massa ac interdum. Eget
+                    aliquam dignissim ut vestibulum.
+                  </p>
+                  <a
+                    class="block-info__link button button--regular button--outline"
+                    href="services-design.html"
+                  >
+                    Learn more
+                  </a>
+                </div>
+              </li>
+              <li class="stages__item">
+                <img class="stages__image" src="@img/stages/2.jpg" alt="image">
+                <div class="stages__block-info block-info">
+                  <h2 class="block-info__title">Project Development</h2>
+                  <p class="block-info__description">
+                    Volutpat tellus mauris sit sit. Posuere ut sit vestibulum
+                    amet viverra in. Est nulla lectus purus tincidunt massa
+                    tortor. Hendrerit vulputate elementum blandit massa vitae
+                    amet felis eget.
+                  </p>
+                  <a
+                    class="block-info__link button button--regular button--outline"
+                    href="services-design.html"
+                  >
+                    Learn more
+                  </a>
+                </div>
+              </li>
+              <li class="stages__item">
+                <img class="stages__image" src="@img/stages/3.jpg" alt="image">
+                <div class="stages__block-info block-info">
+                  <h2 class="block-info__title">Interior Design</h2>
+                  <p class="block-info__description">
+                    Eleifend orci massa et facilisis orci feugiat ac. Congue in
+                    ut lacus, turpis accumsan gravida. Aliquet mattis dignissim
+                    massa sociis a, id bibendum. Egestas lorem eros, mi cras
+                    amet, vel eget molestie. Turpis enim arcu, amet donec massa
+                    pellentesque nulla duis. Arcu dictum metus sed purus
+                    senectus faucibus eget elementum pretium.
+                  </p>
+                  <a
+                    class="block-info__link button button--regular button--outline"
+                    href="services-design.html"
+                  >
+                    Learn more
+                  </a>
+                </div>
+              </li>
+              <li class="stages__item">
+                <img class="stages__image" src="@img/stages/4.jpg" alt="image">
+                <div class="stages__block-info block-info">
+                  <h2 class="block-info__title">Repairs</h2>
+                  <p class="block-info__description">
+                    Facilisis cursus feugiat sit pulvinar amet. Ac facilisi
+                    dictum commodo, tortor gravida pretium, orci. Nunc sit
+                    sollicitudin id egestas mattis. Turpis viverra nec urna
+                    ultrices urna.
+                  </p>
+                  <a
+                    class="block-info__link button button--regular button--outline"
+                    href="services-design.html"
+                  >
+                    Learn more
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="contacts">
+          <div class="contacts__container">
+            <form
+              id="form-contacts"
+              action="#"
+              class="contacts__form form-contacts"
+            >
+              <h3 class="form-contacts__title">
+                A quick way to discuss details
+              </h3>
+              <div class="form-contacts__content">
+                <label class="form-contacts__label" for="contacts-name">
+                  <span class="form-contacts__field">Name*</span>
+                  <input
+                    autocomplete="name"
+                    id="contacts-name"
+                    class="input"
+                    type="text"
+                    placeholder="Your name"
+                    data-required="text"
+                    data-error="Please input name"
+                  >
+                </label>
+                <label class="form-contacts__label" for="contacts-phone">
+                  <span class="form-contacts__field">Phone*</span>
+
+                  <input
+                    autocomplete="mobile"
+                    id="contacts-phone"
+                    class="input"
+                    type="tel"
+                    placeholder="Your phone number"
+                    data-required="tel"
+                    data-error="Please input phone"
+                  >
+                </label>
+                <label class="form-contacts__label" for="contacts-email">
+                  <span class="form-contacts__field">Email</span>
+                  <input
+                    autocomplete="email"
+                    id="contacts-email"
+                    class="input"
+                    type="email"
+                    placeholder="Your working email"
+                  >
+                </label>
+                <label class="form-contacts__label" for="contacts-message">
+                  <span class="form-contacts__field">Message*</span>
+                  <textarea
+                    id="contacts-message"
+                    class="input form-contacts__input form-contacts__input--middle"
+                    placeholder="Your message"
+                    data-required="text"
+                    data-error="Please input message"
+                  ></textarea>
+                </label>
+
+                <label
+                  class="form-contacts__checkbox custom-checkbox"
+                  for="contacts-checkbox"
+                >
+                  <input
+                    id="contacts-checkbox"
+                    class="custom-checkbox__input"
+                    type="checkbox"
+                    data-required="checkbox"
+                    data-error="Please agree"
+                  >
+                  <span class="custom-checkbox__field"
+                    >I agree to receive communications from Createx Construction
+                    Bureau.</span
+                  >
+                </label>
+              </div>
+              <button
+                class="form-contacts__button button button--regular"
+                type="submit"
+              >
+                send request
+              </button>
+            </form>
+          </div>
+        </section>
+      </main>
+      @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_popup.htm',{}) @@include('html/_js.htm',{})
+  </body>
+</html>

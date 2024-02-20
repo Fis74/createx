@@ -1,0 +1,42 @@
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  column-gap: rem(22);
+  margin-bottom: rem(40);
+  &--big {
+    margin-bottom: rem(53);
+  }
+  &__item {
+    font-size: rem(14);
+    line-height: 150%;
+    position: relative;
+    color: $gray;
+    &:not(:last-child) {
+      &::after {
+        content: "/";
+        color: $gray-600;
+        position: absolute;
+        right: rem(-12);
+        top: rem(0);
+        font-size: rem(14);
+        line-height: 150%;
+      }
+    }
+    &:last-child {
+      color: $gray-600;
+      pointer-events: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+  }
+  @media (any-hover: hover) {
+    &__link {
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+}

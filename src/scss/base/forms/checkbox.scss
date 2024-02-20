@@ -1,0 +1,55 @@
+.custom-checkbox {
+  display: flex;
+  cursor: pointer;
+  position: relative;
+  &__field {
+    font-size: rem(14);
+    line-height: 150%;
+    padding-left: rem(28);
+    position: relative;
+    display: inline-block;
+
+    &::before {
+      content: "";
+      left: 0;
+      top: rem(3);
+      position: absolute;
+      border-radius: rem(3);
+      width: rem(16);
+      height: rem(16);
+      background-color: $primary;
+      &:focus-visible {
+        outline: rem(2) solid $primary;
+        outline-offset: rem(12);
+      }
+    }
+    &::after {
+      content: "";
+      left: 0;
+      top: rem(3);
+      position: absolute;
+      width: rem(16);
+      height: rem(16);
+      z-index: 1;
+      opacity: 0;
+      background-position: center;
+      background-size: rem(10) rem(8);
+      background-image: url("@img/icons/check.svg");
+      background-repeat: no-repeat;
+    }
+  }
+  &__input {
+    position: absolute;
+    opacity: 0;
+    width: rem(16);
+    height: rem(16);
+    top: rem(3);
+    left: 0;
+
+    &:checked + .custom-checkbox__field {
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+}

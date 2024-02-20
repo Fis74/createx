@@ -1,0 +1,104 @@
+.page-news {
+  &__hero-block {
+    min-height: rem(600);
+    @include adaptiveValue("padding-top", 152, 80, 767.98);
+    background-color: $gray-200;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      background-image: url("@img/hero-block/6.png");
+      background-repeat: no-repeat;
+      background-position: top right;
+      object-fit: contain;
+      max-height: rem(600);
+      height: 100%;
+      width: 100%;
+      right: 0;
+      z-index: 1;
+    }
+    @media (max-width: $mobile) {
+      min-height: 100%;
+      @include adaptiveValue("padding-bottom", 152, 50, 767.98);
+      &::before {
+        display: none;
+      }
+    }
+  }
+  &__container {
+  }
+}
+
+.categories {
+  &__container {
+    padding-top: rem(120);
+    padding-bottom: rem(180);
+    @include adaptiveValue("padding-top", 120, 60);
+    @include adaptiveValue("padding-bottom", 170, 85);
+  }
+
+  &__title {
+    font-weight: 700;
+    line-height: 130%;
+    text-align: center;
+    color: $black;
+    @include adaptiveValue("font-size", 46, 36);
+    &:not(:last-child) {
+      margin-bottom: rem(40);
+    }
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(60);
+  }
+  &__nav {
+  }
+  &__pagination {
+    margin: 0 auto;
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(rem(395), 1fr));
+    column-gap: rem(30);
+    row-gap: rem(60);
+    justify-content: space-between;
+    @media (max-width: $mobileSmall) {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__item {
+  }
+  &__article-news {
+  }
+}
+
+.nav-categories {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(rem(150), 1fr));
+
+  @media (max-width: $tablet) {
+    grid-template-columns: repeat(auto-fit, minmax(rem(240), 1fr));
+  }
+
+  &__item {
+  }
+  &__button {
+    width: 100%;
+    padding: rem(14) rem(0);
+    color: $primary;
+    background-color: $white;
+    text-transform: capitalize;
+
+    &:not(.button--outline) {
+      color: $gray-600;
+      border: rem(1) solid $white;
+      @media (any-hover: hover) {
+        &:hover {
+          color: $white;
+        }
+      }
+    }
+  }
+}

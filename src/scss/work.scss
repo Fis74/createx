@@ -1,0 +1,67 @@
+.work {
+  &__hero-block {
+    min-height: rem(600);
+    padding-top: rem(152);
+    @include adaptiveValue("padding-top", 152, 80, 767.98);
+    &::before {
+      content: "";
+      position: absolute;
+      top: rem(0);
+      background-image: url("@img/hero-block/3.jpg");
+      background-repeat: no-repeat;
+      background-position: top right;
+      object-fit: contain;
+      max-height: rem(600);
+      height: 100%;
+      width: 100%;
+      right: 0;
+      z-index: 1;
+      background-color: $gray-200;
+    }
+    @media (max-width: $mobile) {
+      min-height: 100%;
+      padding-bottom: rem(152);
+      &::before {
+        display: none;
+      }
+    }
+  }
+}
+.our-work {
+  position: relative;
+  transform: translateY(rem(-59));
+  z-index: 1;
+  &__container {
+    padding-bottom: rem(65);
+  }
+  &__show-more {
+  }
+}
+
+.show-more {
+  &__button {
+    color: $gray;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    gap: rem(16);
+    transition: color 0.8s;
+    font-weight: 700;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: $primary;
+        .show-more__icon {
+          fill: $primary;
+        }
+      }
+    }
+  }
+
+  &__icon {
+    width: rem(24);
+    height: rem(24);
+    fill: $gray;
+    transition: fill 0.8s;
+  }
+}

@@ -1,0 +1,246 @@
+//====================================================================================================
+.header {
+  &__container {
+    position: relative;
+    z-index: 151;
+    display: flex;
+    padding-top: rem(20);
+    padding-bottom: rem(20);
+    min-height: rem(52);
+    justify-content: space-between;
+    align-items: center;
+    @include adaptiveValue("gap", 60, 25, $containerWidth, 991.98);
+    @media (max-width: $tablet) {
+      box-sizing: border-box;
+      margin: 0 0;
+      width: rem(300);
+      @include adaptiveValue("gap", 25, 15, 991.98);
+      @include adaptiveValue("padding-top", 20, 0, 991.98);
+      @include adaptiveValue("padding-bottom", 20, 0, 991.98);
+      .menu-popup-show & {
+        transition-delay: 0.8s;
+        background-color: $white;
+      }
+    }
+  }
+  &__logo {
+    width: rem(130);
+    height: rem(22);
+    position: relative;
+    @media (max-width: $tablet) {
+      @include adaptiveValue("height", 30, 22, 991.98, 320);
+    }
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__menu {
+    margin-right: auto;
+    max-width: rem(560);
+  }
+  &__contacts {
+  }
+  &--absolute {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+}
+
+.menu {
+  &__nav {
+    @media (max-width: $tablet) {
+      display: none;
+      row-gap: rem(30);
+      align-items: flex-start;
+      flex-direction: column;
+      justify-content: flex-start;
+      background-color: $white;
+      width: rem(300);
+      height: 100%;
+      padding-top: rem(112);
+      padding-left: rem(20);
+      @include adaptiveValue("padding-top", 112, 92, 991.98, 360);
+      -webkit-box-shadow: 10px 0px 10px 0px rgba(0, 0, 0, 0.2);
+      -moz-box-shadow: 10px 0px 10px 0px rgba(0, 0, 0, 0.2);
+      box-shadow: 10px 0px 10px 0px rgba(0, 0, 0, 0.2);
+      .loaded & {
+        display: flex;
+      }
+    }
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: rem(2);
+    text-align: left;
+    font-weight: 700;
+    color: $gray;
+    @include adaptiveValue("column-gap", 40, 20, $containerWidth, 991.98);
+    @media (max-width: $tablet) {
+      flex-direction: column;
+      gap: rem(30);
+      font-size: rem(20);
+    }
+  }
+  &__item {
+  }
+  &__link {
+    @media (any-hover: hover) {
+      &:hover {
+        transition: color 0.8s;
+        color: $primary;
+      }
+    }
+    &--active {
+      color: $primary;
+      pointer-events: none;
+    }
+  }
+}
+.contacts-header {
+  font-style: normal;
+  display: flex;
+  @include adaptiveValue("gap", 36, 26, $containerWidth, 991.98);
+  @media (max-width: $tablet) {
+    display: none;
+    align-items: flex-start;
+    flex-direction: column;
+    .loaded & {
+      display: flex;
+    }
+  }
+  &__link {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-left: rem(53);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: rem(40) rem(40);
+
+    &--mail {
+      background-image: url("@img/icons/phone.svg");
+      @media (max-width: $tablet) {
+        position: relative;
+        left: rem(-6);
+      }
+    }
+    &--tel {
+      background-image: url("@img/icons/chat.svg");
+      position: relative;
+    }
+  }
+  &__caption {
+    color: $gray;
+    font-size: rem(14);
+    font-weight: 700;
+    line-height: 150%;
+  }
+  &__value {
+    color: $black;
+    font-size: rem(18);
+    line-height: 150%;
+  }
+}
+//====================================================================================================
+.icon-menu {
+  display: none;
+  @include adaptiveValue("height", 40, 25, 991.98, 320);
+  @include adaptiveValue("width", 40, 25, 991.98, 320);
+
+  &:focus-visible {
+    outline: rem(1) solid $primary;
+  }
+  @media (max-width: $tablet) {
+    .menu-popup-show & {
+      position: relative;
+      z-index: 151;
+    }
+
+    &__close {
+      display: none;
+      .menu-popup-show & {
+        display: block;
+      }
+    }
+
+    &__open {
+      display: block;
+      .menu-popup-show & {
+        display: none;
+      }
+    }
+  }
+  @media (any-hover: hover) {
+    &:hover {
+      svg {
+        fill: $primary;
+      }
+    }
+  }
+  svg {
+    transition: transform 0.8s;
+    width: 100%;
+    height: 100%;
+    fill: $primary;
+  }
+}
+//Burger
+// .icon-menu {
+//   display: none;
+//   @media (max-width: $tablet) {
+//     display: block;
+//     position: relative;
+//     width: rem(30);
+//     height: rem(18);
+//     cursor: pointer;
+//     z-index: 2;
+
+//     span,
+//     &::before,
+//     &::after {
+//       content: "";
+//       transition: all 0.3s ease 0s;
+//       right: 0;
+//       position: absolute;
+//       width: 100%;
+//       height: rem(2);
+//       background-color: $gray;
+//     }
+
+//     &::before {
+//       top: 0;
+//     }
+
+//     &::after {
+//       bottom: 0;
+//     }
+
+//     span {
+//       top: calc(50% - rem(1));
+//     }
+
+//     .menu-open & {
+//       span {
+//         width: 0;
+//       }
+
+//       &::before,
+//       &::after {
+//       }
+
+//       &::before {
+//         top: calc(50% - rem(1));
+//         transform: rotate(-45deg);
+//       }
+
+//       &::after {
+//         bottom: calc(50% - rem(1));
+//         transform: rotate(45deg);
+//       }
+//     }
+//   }
+// }

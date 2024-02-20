@@ -1,0 +1,46 @@
+// Базовые стили спойлеров
+// Сниппет (HTML): spoller
+
+// Блок со спойлерами
+.block-spoller {
+  position: relative;
+  max-width: rem(420);
+  padding-left: rem(44);
+  z-index: 1;
+  &__title {
+    font-weight: 700;
+    font-size: rem(28);
+    line-height: 150%;
+    @include adaptiveValue("font-size", 28, 24);
+    color: $black;
+    cursor: pointer;
+    &:not(:last-child) {
+      margin-bottom: rem(12);
+    }
+    &:focus-visible {
+      outline: rem(2) solid $primary;
+      outline-offset: rem(2);
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      background: url("@img/icons/plus.svg") left center no-repeat;
+      top: rem(9);
+      left: 0;
+      width: rem(24);
+      height: rem(24);
+      cursor: pointer;
+    }
+  }
+  &__description {
+  }
+}
+details[open] > .block-spoller__title {
+  &::after {
+    background: url("@img/icons/minus.svg") left center no-repeat;
+  }
+}
+
+summary {
+  list-style-type: none;
+}

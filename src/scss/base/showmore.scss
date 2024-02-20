@@ -1,0 +1,9 @@
+[data-showmore] {
+}
+[data-showmore-content] {
+}
+[data-showmore-button] {
+  ._showmore-active & {
+    display: none;
+  }
+}
